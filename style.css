@@ -1,0 +1,63 @@
+* {
+  scroll-behavior: smooth;
+}
+
+.nav-link {
+  position: relative;
+  margin: 5px;
+  transition: width 2s ease-in-out 0.1s;
+  color: #000000;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+}
+
+.nav-link:after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+}
+
+.nav-link:hover:after {
+  width: 100%;
+}
+.container {
+  margin-bottom: 60px;
+}
+
+.backgroundCarousel {
+  background-color: #fceae8;
+  border-radius: 7px;
+}
+
+.carousel-item {
+  padding: 20px 40px;
+}
+
+@media (min-width: 992px) {
+  .heading {
+    margin-bottom: 10px;
+  }
+
+  .desc {
+    margin-bottom: 60px;
+  }
+  .buy-btn {
+    margin-bottom: 20px;
+  }
+}
+
+.price {
+  color: #ff136f;
+}
+
+.buy-btn {
+  color: #ffff;
+  background-image: linear-gradient(to bottom, #ff589b 0%, #ff136f 100%);
+  border: none;
+  border-radius: 8px;
+  padding: 9px 25px;
+  cursor: pointer;
+}
