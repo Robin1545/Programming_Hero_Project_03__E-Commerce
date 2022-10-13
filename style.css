@@ -11,17 +11,32 @@
   letter-spacing: 0.5px;
 }
 
-.nav-link:after {
-  content: "";
-  position: absolute;
-  background-color: black;
-  height: 2px;
-  left: 0;
-  bottom: 0;
+@media (min-width: 992px) {
+  .nav-link:after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+  }
+  .nav-link:hover:after {
+    width: 100%;
+  }
 }
 
-.nav-link:hover:after {
-  width: 100%;
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .nav-link {
+    transition: 0.3s ease-in-out 0.1s;
+  }
+  .nav-link:hover {
+    letter-spacing: 5px;
+    background-color: rgb(197, 227, 255);
+    border-radius: 15px;
+  }
 }
 .container {
   margin-bottom: 60px;
@@ -60,4 +75,180 @@
   border-radius: 8px;
   padding: 9px 25px;
   cursor: pointer;
+}
+.buy-btn:hover {
+  color: white;
+  background-image: linear-gradient(to bottom, #e60760 100%, #ff136f 100%);
+}
+
+@media (max-width: 768px) {
+  .home {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+/* catagory Section */
+.shoes,
+.watch,
+.bag {
+  color: #ffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 10px 30px;
+}
+.shoes {
+  background-image: linear-gradient(to left, blue 53%, #152238 0%);
+}
+.watch {
+  background-image: linear-gradient(to left, rgb(252, 40, 252) 53%, purple 0%);
+}
+.bag {
+  background-image: linear-gradient(to left, orange 53%, orangered 0%);
+}
+
+/* extra small (phones) */
+@media (max-width: 576px) {
+  .shoes,
+  .watch {
+    margin-bottom: 10px;
+  }
+}
+
+/* small */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .shoes,
+  .watch {
+    margin-bottom: 15px;
+  }
+}
+
+/* medium */
+@media (min-width: 768px) and (max-width: 992px) {
+  .shoes,
+  .watch {
+    margin-bottom: 20px;
+  }
+}
+
+/* Shoes Catagory */
+/* Shoes Catagory */
+
+@media (min-width: 992px) and (max-width: 1380px) {
+  .shoeCard {
+    position: relative;
+    transition: 0.3s ease-in-out 0.1s;
+  }
+
+  .shoeCard:hover {
+    margin-top: -20px;
+    box-shadow: 2px 3px 3px black;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .shoeCard {
+    position: relative;
+    transition: 0.3s ease-in-out 0.1s;
+  }
+
+  .shoeCard:hover {
+    margin-top: -15px;
+    box-shadow: 2px 3px 3px black;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .shoeCard {
+    width: 25rem;
+    margin: auto;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 3px rgb(99, 98, 98);
+  }
+}
+@media (max-width: 576px) {
+  .shoeCard {
+    width: 22rem;
+    margin: auto;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 3px rgb(99, 98, 98);
+  }
+}
+/* Backpack Catagory */
+
+.bag-btn {
+  align-items: center;
+  background-color: rgb(236, 236, 236);
+}
+.bag-btn a {
+  margin: 15px 10px;
+}
+
+.bagCard {
+  border: none;
+  box-shadow: 3px 3px 6px gray;
+}
+
+@media (min-width: 992px) {
+  .different {
+    margin-top: 5px;
+  }
+  .different2 {
+    margin-top: 2px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .different {
+    margin-top: 2.5px;
+  }
+  #backpack p {
+    height: 70px;
+    overflow: auto;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .bagCard {
+    width: 25rem;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .bagCard {
+    width: 22rem;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .bagCard .card-text {
+    display: none;
+  }
+}
+
+/* Footer Section */
+.footer {
+  background-color: #fceae8;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+}
+.footer h3 {
+  font-size: 29px;
+  margin-bottom: 2px;
+}
+.footer p {
+  margin-bottom: 3px;
+}
+.footer input {
+  width: 285px;
+  border: none;
+  padding: 3px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.footer .buy-btn {
+  padding: 7px 20px;
 }
