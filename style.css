@@ -17,10 +17,13 @@
     position: absolute;
     background-color: black;
     height: 2px;
-    left: 0;
+    left: 50%;
+    width: 0;
     bottom: 0;
+    transition: 0.4s ease-out;
   }
   .nav-link:hover:after {
+    left: 0;
     width: 100%;
   }
 }
